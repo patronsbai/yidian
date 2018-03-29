@@ -2,9 +2,6 @@
 
 import redis
 
-
-
-
 class Config(object):
 
     DEBUG=True
@@ -20,3 +17,12 @@ class Config(object):
     SESSION_REDIS = redis.StrictRedis(REDIS_HOST, REDIS_PORT)
     SESSION_USE_SIGNER = True
     PERMANENT_SESSION_LIFETIME = 86400
+
+
+
+class DevelopmentConfig(Config):
+    DEBUG=True
+
+
+class ProductionConfig(Config):
+    pass
