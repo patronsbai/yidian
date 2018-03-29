@@ -4,10 +4,9 @@ import redis
 
 class Config(object):
 
-    DEBUG=True
     SECRET_KEY = "sdgvsdvsdvsdvsv"
 
-    SQLALCHEMY_DATABASE_URI = "mysql://root:mysql@127.0.0.1:33006/ihome18"
+    SQLALCHEMY_DATABASE_URI = "mysql://root:mysql@127.0.0.1:3306/ihome18"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     REDIS_HOST = "127.0.0.1"
@@ -19,8 +18,8 @@ class Config(object):
     PERMANENT_SESSION_LIFETIME = 86400
 
 
-
 class DevelopmentConfig(Config):
+
     DEBUG=True
 
 
@@ -30,7 +29,7 @@ class ProductionConfig(Config):
 
 config = {
     "development":DevelopmentConfig,
-    "production":ProductionConfig
+    "production" : ProductionConfig
 }
 
 
