@@ -207,3 +207,8 @@ class Order(BaseModel, db.Model):
         }
         return order_dict
 
+
+
+
+
+class Baichogkun():
